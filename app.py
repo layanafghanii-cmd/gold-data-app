@@ -10,7 +10,7 @@ st.set_page_config(page_title="Gold Data Analysis App", layout="centered")
 # =====================
 # Load Data
 # =====================
-FILE_PATH = "gold_data_cleaned_pca.csv"  # Make sure the CSV is in the same folder
+FILE_PATH = "gold_data_cleaned_pca.csv.csv"  # Make sure the CSV is in the same folder
 df = pd.read_csv(FILE_PATH)
 numeric_cols = df.select_dtypes(include="number").columns
 
@@ -49,4 +49,5 @@ if st.button("📈 Run PCA Analysis"):
 # =====================
 if st.button("🔮 Predict (Demo)"):
     result = round(value_1 * 0.5 + value_2 * 0.3, 2)
+
     st.success(f"📌 Result based on selected features: {result}")
